@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    table {
+        width: 500px;
+        border-collapse: collapse;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+</style>
+
+<h2>Index</h2>
+<table border="1" width="500">
+    <tr>
+        <th> Mã Chủ Đề </th>
+        <th> Tên Chủ Đề </th>
+    </tr>
+    @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.MaCD</th>
+                    <th>@item.TenChuDe</th>
+                </tr>
+            }
+</table>
+
